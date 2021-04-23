@@ -14,7 +14,8 @@ Step-1: Create a new Dockerfile
 
 Step-2: Initialize an image 
 
-	you can copy a base image and make changes to it as required. here we are copying the base image from ubuntu:trusty distribution
+You can copy a base image and make changes to it as required. <br>
+Here we are copying the base image from ubuntu:trusty distribution
 	
 	$ FROM ubuntu:trusty		//copies base image
 	
@@ -27,15 +28,15 @@ Step-3: Create image by building it
 
 	 $ sudo docker build -t endpoint:latest
 	
-	- This creates an image named "endpoint" using Dockerfile.
-	- Navigate to the directory where Dockerfile is located before executing this command.
+- This creates an image named "endpoint" using Dockerfile.
+- Navigate to the directory where Dockerfile is located before executing this command.
 
 Step-4: Create containers for that image
 
-	`$ sudo docker run -d --privileged --name=int --net=none endpoint:latest tail -f /dev/null`
+	$ sudo docker run -d --privileged --name=int --net=none endpoint:latest tail -f /dev/null
 	
-	- Creates docker container named "int" which is your host
-	- Disable default (docker) networking using "--net=none". this is because we are builing out own network.
-	- Container should run with "priveleged" flag to allow running of system calls by guest
-	- "-d" flag makes the container run as a daemon
-	- Container needs to be alive for the duration of the experiment so make it do something useless like monitoring the contents of an empty file keeping it alive forever
+- Creates docker container named "int" which is your virtual host/
+- Disable default (docker) networking using "--net=none". this is because we are builing out own network.
+- Container should run with "priveleged" flag to allow running of system calls by guest
+- "-d" flag makes the container run as a daemon
+- Container needs to be alive for the duration of the experiment so make it do something useless like monitoring the contents of an empty file keeping it alive forever
