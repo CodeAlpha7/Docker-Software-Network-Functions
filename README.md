@@ -25,19 +25,17 @@ Step-2: Initialize an image
 
 Step-3: Create image by building it
 
-	$ sudo docker build -t endpoint:latest
+	`$ sudo docker build -t endpoint:latest`
 	
-	<ul>
-	<li>this creates an image named "endpoint" using Dockerfile. </li>
-	<li>navigate to the directory where Dockerfile is located before executing this command. </li>
-	</ul>
+	- This creates an image named "endpoint" using Dockerfile.
+	- Navigate to the directory where Dockerfile is located before executing this command.
 
 Step-4: Create containers for that image
 
-	$ sudo docker run -d --privileged --name=int --net=none endpoint:latest tail -f /dev/null
+	`$ sudo docker run -d --privileged --name=int --net=none endpoint:latest tail -f /dev/null`
 	
-	//creates docker container named "int" which is your host
-	//disable default (docker) networking using "--net=none". this is because we are builing out own network.
-	//container should run with "priveleged" flag to allow running of system calls by guest
-	//"-d" flag makes the container run as a daemon
-	//container needs to be alive for the duration of the experiment so make it do something useless like monitoring the contents of an empty file keeping it alive forever
+	- Creates docker container named "int" which is your host
+	- Disable default (docker) networking using "--net=none". this is because we are builing out own network.
+	- Container should run with "priveleged" flag to allow running of system calls by guest
+	- "-d" flag makes the container run as a daemon
+	- Container needs to be alive for the duration of the experiment so make it do something useless like monitoring the contents of an empty file keeping it alive forever
