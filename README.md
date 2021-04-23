@@ -3,7 +3,7 @@ Contains step-by-step procedure to create Dockerfile, custom images and deploy c
 
 #### TUTORIAL ON HOW TO USE DOCKER
 
-step-1: Create a new Dockerfile
+Step-1: Create a new Dockerfile
 	
 	$ mkdir -p nginx-image;  	//create fresh directory
 	$ cd nginx-image/  		//open the location
@@ -25,7 +25,7 @@ Step-2: Initialize an image
 
 Step-3: Create image by building it
 
-	`$ sudo docker build -t endpoint:latest`
+	 $ sudo docker build -t endpoint:latest
 	
 	- This creates an image named "endpoint" using Dockerfile.
 	- Navigate to the directory where Dockerfile is located before executing this command.
