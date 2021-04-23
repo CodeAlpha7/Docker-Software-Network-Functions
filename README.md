@@ -1,9 +1,9 @@
-# docker
+# Using Docker
 Contains step-by-step procedure to create Dockerfile, custom images and deploy containers to behave as virtual hosts
 
------TUTORIAL ON HOW TO USE DOCKER-----
+#### TUTORIAL ON HOW TO USE DOCKER
 
-step-1: create a new Dockerfile
+step-1: Create a new Dockerfile
 	
 	$ mkdir -p nginx-image;  	//create fresh directory
 	$ cd nginx-image/  		//open the location
@@ -12,7 +12,7 @@ step-1: create a new Dockerfile
 	$ vim Dockerfile		//opens it using vim editor
 	
 
-step-2:initialize an image 
+Step-2: Initialize an image 
 
 	you can copy a base image and make changes to it as required. here we are copying the base image from ubuntu:trusty distribution
 	
@@ -23,14 +23,16 @@ step-2:initialize an image
 	$ RUN apt-get install -y hping3
 	
 
-step-3: create image by building it
+Step-3: Create image by building it
 
 	$ sudo docker build -t endpoint:latest
 	
-	//this creates an image named "endpoint" using Dockerfile
-	//navigate to the directory where Dockerfile is located before executing this command
+	<ul>
+	<li>this creates an image named "endpoint" using Dockerfile. </li>
+	<li>navigate to the directory where Dockerfile is located before executing this command. </li>
+	</ul>
 
-step-4: create containers for that image
+Step-4: Create containers for that image
 
 	$ sudo docker run -d --privileged --name=int --net=none endpoint:latest tail -f /dev/null
 	
