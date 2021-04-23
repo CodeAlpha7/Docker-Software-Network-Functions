@@ -32,8 +32,7 @@ step-3: create image by building it
 
 step-4: create containers for that image
 
-	$ sudo docker run -d --privileged --name=int --net=none 
-	endpoint:latest tail -f /dev/null
+	$ sudo docker run -d --privileged --name=int --net=none endpoint:latest tail -f /dev/null
 	
 	//creates docker container named "int" which is your host
 	//disable default (docker) networking using "--net=none". this is because we are builing out own network.
