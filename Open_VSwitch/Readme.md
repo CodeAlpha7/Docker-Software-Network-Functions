@@ -4,7 +4,7 @@ Now, Let's run docker containers as virtual hosts and run Open VSwitch to implem
 We can connect hosts to switches and test connectivity between them. Here we are implementing the following topology: <br>
 #### Host --> Switch <-- Host
 <br>
-![Alt text](http://github.com/CodeAlpha7/docker/blob/Open_VSwitch/Basic_topology.png?raw=true)
+![Alt text](https://github.com/CodeAlpha7/docker/blob/main/Open_VSwitch/Basic_topology.png)
 <br>
 
 ### Creating Virtual Hosts using Docker
