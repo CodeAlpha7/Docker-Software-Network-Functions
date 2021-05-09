@@ -43,3 +43,5 @@ Now, execute a command on running container:
 <pre><code> docker exec -it host1 ping -c 3 192.168.1.3 </code></pre>
 
 here, we send 3 ICMP requests to host 192.168.1.3 from container "host1"
+
+![Screenshot from 2021-05-09 23-33-59](https://user-images.githubusercontent.com/72344834/117582331-218e2b80-b11f-11eb-9b63-16bcb10ee573.png)
