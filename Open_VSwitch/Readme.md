@@ -2,11 +2,10 @@
 
 Now, Let's run docker containers as virtual hosts and run Open VSwitch to implement virtual network topology. 
 We can connect hosts to switches and test connectivity between them. Here we are implementing the following topology: <br>
-#### Host --> Switch <-- Host
 <br>
-![alt text](https://github.com/CodeAlpha7/docker/blob/main/Open_VSwitch/Basic_topology.png?raw=true)<br>
-![alt text](https://raw.githubusercontent.com/CodeAlpha7/docker/main/Open_VSwitch/Basic_topology.png)
-<br>
+
+![Basic_topology](https://user-images.githubusercontent.com/72344834/117581025-4fbc3d00-b118-11eb-890f-d8eb8a1d1c37.png)
+<br><br>
 
 ### Creating Virtual Hosts using Docker
 From the previous demo, we have already created a dockerfile and an image. Based on that image we can run multiple hosts. <br>
