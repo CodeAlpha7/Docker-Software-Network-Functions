@@ -20,7 +20,8 @@ We have now created 2 virtual hosts "host1" and "host2"
 <br><br>
 
 ### Creating Virtual Switch using Open VSwitch
-We have created 2 containers based on previous image. Now start the Open VSwitch service using the command:
+We have created 2 containers based on previous image.<br>
+Now, open a new terminal and start the Open VSwitch service using the command:
 <pre><code> sudo /usr/share/openvswitch/scripts/ovs-ctl start </code></pre>
 <br>
 Create a virtual switch:
