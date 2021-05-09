@@ -4,12 +4,14 @@ Host --> Switch <-- Host
 
 From the previous demo, we have already created a dockerfile and an image. Based on that image we can run multiple hosts.
 
-After starting the terminal, run this command to start the docker service:
-``` sudo systemctl start docker ```
+After starting the terminal, run this command to start the docker service: /br
+          ``` sudo systemctl start docker ```
 
 Now, create 2 containers for that image we have created:
-``` docker run -d --privileged --name=host1 --net=none endpoint:latest tail -f /dev/null ```
-``` docker run -d --privileged --name=host2 --net=none endpoint:latest tail -f /dev/null ```
+``` 
+docker run -d --privileged --name=host1 --net=none endpoint:latest tail -f /dev/null 
+docker run -d --privileged --name=host2 --net=none endpoint:latest tail -f /dev/null 
+```
 
 We have created 2 containers based on previous image. Now start the Open VSwitch service using the command:
 ``` sudo /usr/share/openvswitch/scripts/ovs-ctl start ```
