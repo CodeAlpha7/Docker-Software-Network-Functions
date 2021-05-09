@@ -1,0 +1,31 @@
+Now, Let's run docker containers as virtual hosts and run Open VSwitch to implement virtual network topology. 
+We can connect hosts to switches and test connectivity between them. Here we are implementing the following topology:
+Host --> Switch <-- Host
+
+From the previous demo, we have already created a dockerfile and an image. Based on that image we can run multiple hosts.
+
+After starting the terminal, run this command to start the docker service:
+``` sudo systemctl start docker ```
+
+Now, create 2 containers for that image we have created:
+``` docker run -d --privileged --name=host1 --net=none endpoint:latest tail -f /dev/null ```
+``` docker run -d --privileged --name=host2 --net=none endpoint:latest tail -f /dev/null ```
+
+We have created 2 containers based on previous image. Now start the Open VSwitch service using the command:
+``` sudo /usr/share/openvswitch/scripts/ovs-ctl start ```
+
+Create a virtual switch:
+``` sudo ovs-vsctl add-br ovs-br1 ```
+
+Here we created a switch named "ovs-br1"
+
+Now connect the containers to the virtual switch:
+``` sudo ovs-docker add-port ovs-br1 eth1 host1 --ipaddress="192.168.1.2/24" ```
+``` sudo ovs-docker add-port ovs-br1 eth2 host2 --ipaddress="192.168.1.3/24" ```
+
+Here, we create a port "eth1" on container "host1" with an IP address "192.168.1.2/24" that connects to virtual switch "ovs-br1"
+
+Now, execute a command on running container:
+``` docker exec -it host1 ping -c 3 192.168.1.3 ```
+
+here, we send 3 ICMP requests to host 192.168.1.3 from container "host1"
