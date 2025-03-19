@@ -1,4 +1,6 @@
 # Using Docker
+Contains base docker images used to build containers representing virtual hosts with steps to communicate between hosts using Open VSwitch. Explains how to build software network functions using docker. 
+
 Contains step-by-step procedure to create Dockerfile, custom images and deploy containers to behave as virtual hosts
 
 ### TUTORIAL ON HOW TO USE DOCKER
