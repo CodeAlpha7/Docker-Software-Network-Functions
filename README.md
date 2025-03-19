@@ -1,4 +1,4 @@
-# Using Docker
+# Building Software Network Functions using Docker
 Contains base docker images used to build containers representing virtual hosts with steps to communicate between hosts using Open VSwitch. Explains how to build software network functions using docker. 
 
 Contains step-by-step procedure to create Dockerfile, custom images and deploy containers to behave as virtual hosts.
@@ -10,7 +10,6 @@ In this project, we:
 
 We specifically look at building 2 specific network functions: Firewall and NAT.
 
-### TUTORIAL ON HOW TO USE DOCKER
 
 #### Step-1: Create a new Dockerfile
 	
