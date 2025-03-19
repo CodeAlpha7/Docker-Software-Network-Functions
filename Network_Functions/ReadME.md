@@ -33,14 +33,14 @@ We will be creating the following topology:<br>
 ![Screenshot from 2021-05-11 22-34-57](https://user-images.githubusercontent.com/72344834/117856486-48786900-b2a9-11eb-8a0d-274e266b87ba.png)
 
 <br>
-From the previous tutorials we have seen how to create containers and connect them using switches. But let us still sum up everything to make work easy. <br>
+Each container behaves as a separate virtual host. One such container placed at the network edge will serve as our Firewall. We communicate between 2 containers using switches - for which we will use Open VSwitch (or OVS). Here's how to set them up. <br>
 
 #### Create Open VSwitch Virtual Switches
 <pre><code>
 sudo ovs-vsctl add-br ovs-br1
 sudo ovs-vsctl add-br ovs-br2
 </code></pre>
-The switch "ovs-br1" already exists for those who have done the previous tutorials
+The switch "ovs-br1" already exists if we have run other examples prior to this.
 <br><br>
 
 #### Create Host containers from "endpoint" image
